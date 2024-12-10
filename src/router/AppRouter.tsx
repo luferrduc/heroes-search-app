@@ -4,6 +4,7 @@ import { DcPage, HeroPage, MarvelPage, SearchPage } from "@/heroes/pages"
 import { MainPage } from "@/pages/MainPage"
 import { MainLayout } from "@/layouts/MainLayout"
 import { HeroesLayout } from "@/heroes/layouts/HeroesLayout"
+// import { HeroRoutes } from "@/heroes/routes/HeroRoutes"
 
 export const AppRouter = () => {
   return (
@@ -27,3 +28,19 @@ export const AppRouter = () => {
     </>
   )
 }
+
+
+// export const AppRouter = () => {
+//   return (
+//     <>
+//       <Routes>
+//         <Route path="login" element={<LoginPage />} />
+//         <Route path="/*" element={<HeroRoutes />} />
+          
+       
+//       </Routes>
+//     </>
+//   )
+// }
+
+

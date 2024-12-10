@@ -1,6 +1,14 @@
-import { Link, NavLink } from "react-router"
+import { Link, NavLink, useNavigate } from "react-router"
 
 export const Navbar = () => {
+	const navigate = useNavigate()
+	
+
+	const handleLogout = () => {
+		navigate('/login', {
+			replace: true // Reemplazando el historial anterior
+		})
+	}
 	return (
 		<nav
 			className="navbar navbar-expand-lg bg-body-tertiary px-2 py-3"
@@ -49,7 +57,9 @@ export const Navbar = () => {
 					</ul>
           <ul className="navbar-nav ml-auto">
             <span className="nav-item nav-link text-primary">Luciano</span>
-            <button className="nav-item nav-link btn btn-outline-success w-100">
+            <button className="nav-item nav-link btn btn-outline-success w-100"
+							onClick={ handleLogout }
+							>
               Logout
             </button>
           </ul>
