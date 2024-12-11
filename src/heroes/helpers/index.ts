@@ -1,2 +1,2 @@
-export { getHeroesById } from "./getHeroById";
+export { getHeroById } from "./getHeroById";
 export { getHeroesByPublisher } from "./getHeroesByPublisher";

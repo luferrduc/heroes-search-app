@@ -1,5 +1,8 @@
 export const SearchPage = () => {
   return (
-    <h1>Search Page</h1>
+    <>
+      <h1>Search Page</h1>
+      <hr />
+    </>
   )
 }
