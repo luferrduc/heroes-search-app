@@ -16,7 +16,7 @@ export const Navbar = () => {
 		>
 			<div className="container-fluid">
 				<Link className="navbar-brand" to="#">
-					Asociaciones
+					Asociations
 				</Link>
 				<button
 					className="navbar-toggler"

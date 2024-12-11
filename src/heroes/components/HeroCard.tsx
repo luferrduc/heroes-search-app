@@ -10,8 +10,8 @@ export const HeroCard = ({ id, superhero, alter_ego, first_appearance, character
   const heroImgUrl = `/assets/heroes/${id}-compress.webp`
 
   return (
-    <div className="col">
-        <article className="card mb-3" style={{maxWidth: "540px"}}>      
+    <div className="col animate__animated animate__fadeIn">
+        <article className="card mb-3">      
         <div className="row g-0">
           <div className="col-4">
             <img src={heroImgUrl} className="img-fluid rounded-start" alt="..."/>

@@ -21,7 +21,7 @@ export const HeroPage = () => {
 
 	return (
 		<div className="row mt-md-3">
-			<div className="col-12 col-md-4">
+			<div className="col-12 col-md-4 animate__animated animate__fadeInLeft">
 				<img className="img-thumbnail" src={heroImgUrl} alt={superhero} />
 			</div>
 			<div className="col-12 col-md-8 d-flex flex-column justify-content-between">
