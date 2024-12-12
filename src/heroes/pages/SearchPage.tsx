@@ -8,7 +8,6 @@ export const SearchPage = memo(() => {
 
   const [searchParams, setSearchParams] = useSearchParams()
 
-  console.log('rendering')
   const q = searchParams.get('q')
 
   const heroName = q || ''
@@ -21,8 +20,8 @@ export const SearchPage = memo(() => {
   const handleSearchSubmit = (event: FormEvent) => {
 
     event.preventDefault()
-    if(searchHero.trim().length <= 1) return
-    if(q === searchHero.trim()) return
+    if(searchHero.trim().length <= 1 && searchHero.trim() != '') return
+    if(heroName === searchHero.trim()) return
 
     setSearchParams({ q: searchHero.trim() })
     
@@ -69,10 +68,14 @@ export const SearchPage = memo(() => {
 				</div>
 				<div className="col-7">
 					<h4>Results</h4>
-					<hr />
-					<div className="alert alert-primary">Search a hero</div>
+					<hr />					
+					{/* 
+						// TODO: Refactorizar el componente como Alert o algo por el estilo  
+					*/}
           {
-            filteredHeroes.length == 0 && <div className="alert alert-danger">There is no a hero with <b>{searchParams.get('q')}</b></div>
+						(heroName == '')
+						? <div className="alert alert-primary animate__animated animate__fadeIn">Search a hero</div>
+						: filteredHeroes.length == 0 && <div className="alert alert-danger animate__animated animate__fadeIn">There is no a hero with <b>{heroName}</b></div>
           }
           {
             filteredHeroes?.map( hero => (
