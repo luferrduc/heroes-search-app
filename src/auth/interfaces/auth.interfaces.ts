@@ -21,5 +21,6 @@ export interface Action {
 
 export interface AuthContextType {
   authState: State;
-  login: (name: string, email?: string) => void
+  login: (name: string, email?: string) => void,
+  logout: () => void
 }

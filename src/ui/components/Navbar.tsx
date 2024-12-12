@@ -3,11 +3,12 @@ import { useAuthContext } from "@/auth/hooks/useAuthContext"
 
 export const Navbar = () => {
 
-	const { authState: { user } } = useAuthContext()
+	const { authState: { user }, logout } = useAuthContext()
 	const navigate = useNavigate()
 	
 
 	const handleLogout = () => {
+		logout()
 		navigate('/login', {
 			replace: true // Reemplazando el historial anterior
 		})
