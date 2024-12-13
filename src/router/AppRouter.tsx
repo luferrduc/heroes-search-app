@@ -13,15 +13,19 @@ export const AppRouter = () => {
   return (
     <>
       <Routes>
-        <Route path="/login"  element={<PublicRoute>
-          <MainLayout />
-        </PublicRoute>}>
+        <Route path="/login" element={
+          <PublicRoute>
+            <MainLayout />
+          </PublicRoute>
+        }>
           <Route index element={<LoginPage />}/>
         </Route>
       
-        <Route path="/" element={<PrivateRoute>
-          <HeroesLayout />
-        </PrivateRoute>}>
+        <Route path="/" element={
+          <PrivateRoute>
+            <HeroesLayout />
+          </PrivateRoute>}
+        >
           <Route index element={<MainPage />}/>          
           <Route path="marvel" element={<MarvelPage />}/>
           <Route path="dc" element={<DcPage />}/>
