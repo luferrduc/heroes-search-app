@@ -6,11 +6,11 @@ import { Action, State } from "../interfaces/auth.interfaces"
 
 
 const init = (): State => {
-  const user = JSON.parse(localStorage.getItem('user')!)
+  const user = localStorage.getItem('user')
 
   return {
     logged: !!user,
-    user: user
+    user: user ? JSON.parse(user) : null
   }
 }
 

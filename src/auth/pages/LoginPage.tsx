@@ -24,7 +24,6 @@ export const LoginPage = () => {
   const handleLogin = (name: string, email?: string) => {
 
     const lastPath = localStorage.getItem('lastPath') || '/'
-
     login(name, email)
     navigate(lastPath, {
       replace: true

@@ -1,5 +1,4 @@
 import { useAuthContext } from "@/auth/hooks/useAuthContext"
-import { useMemo } from "react";
 import { Navigate, useLocation } from "react-router";
 
 export const PrivateRoute = ({ children }: { children: JSX.Element }) => {
@@ -10,8 +9,10 @@ export const PrivateRoute = ({ children }: { children: JSX.Element }) => {
   /*
     TODO: Verificar por qué al hacer login vuelve a colocar el lastPath en /
   */ 
-  const lastPath = useMemo(() => pathname + search, [pathname, search])
-  localStorage.setItem('lastPath', lastPath)
+  if(isLogged){
+    const lastPath = pathname + search
+    localStorage.setItem('lastPath', lastPath)
+  }
   
   return isLogged ? children : <Navigate to="/login" />
 }

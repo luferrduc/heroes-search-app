@@ -2,7 +2,7 @@
 
 export interface State {
   logged: boolean;
-  user?: UserPayload
+  user?: UserPayload | null
 }
 
 

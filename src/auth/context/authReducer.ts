@@ -10,7 +10,7 @@ export const authReducer = (state: State, action: Action) => {
         return newState
       }
     case "[Auth] Logout": {
-        const newState: State = { logged: false }
+        const newState: State = { logged: false, user: null }
         return newState;
       }
     default:
