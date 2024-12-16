@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router"
 import { HeroCard } from "../components"
-import { useForm } from "../../ui/hooks/useForm"
+import { useForm } from "../../hooks/useForm"
 import { FormEvent, memo } from "react"
 import { getHeroesByName } from "../helpers"
 

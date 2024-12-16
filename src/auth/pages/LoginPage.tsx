@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router"
 import { useAuthContext } from "../hooks/useAuthContext"
-import { useForm } from "@/ui/hooks/useForm"
+import { useForm } from "@/hooks/useForm"
 import { FormEvent } from "react"
 
 export const LoginPage = () => {
