@@ -1,0 +1,74 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Probando <SearchPage /> > debe de mostrarse correctamente con valores por defecto 1`] = `
+<div>
+  <h1>
+    Search
+  </h1>
+  <hr />
+  <div
+    class="row"
+  >
+    <div
+      class="col-5"
+    >
+      <h4>
+        Searching
+      </h4>
+      <hr />
+      <form>
+        <input
+          autocomplete="off"
+          class="form-control"
+          name="searchHero"
+          placeholder="Search a hero"
+          type="text"
+          value=""
+        />
+        <button
+          class="btn btn-outline-primary mt-2 px-3"
+        >
+          <svg
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+              stroke="none"
+            />
+            <path
+              d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"
+            />
+            <path
+              d="M21 21l-6 -6"
+            />
+          </svg>
+          Search
+        </button>
+      </form>
+    </div>
+    <div
+      class="col-7"
+    >
+      <h4>
+        Results
+      </h4>
+      <hr />
+      <div
+        class="alert alert-primary animate__animated animate__fadeIn"
+      >
+        Search a hero
+      </div>
+    </div>
+  </div>
+</div>
+`;
