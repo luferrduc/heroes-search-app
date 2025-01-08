@@ -35,7 +35,7 @@ export const SearchPage = memo(() => {
 				<div className="col-5">
 					<h4>Searching</h4>
 					<hr />
-					<form onSubmit={handleSearchSubmit}>
+					<form onSubmit={handleSearchSubmit} name="searchForm" role="form">
 						<input
 							type="text"
 							className="form-control"
@@ -74,8 +74,8 @@ export const SearchPage = memo(() => {
 					*/}
           {
 						(heroName == '')
-						? <div className="alert alert-primary animate__animated animate__fadeIn">Search a hero</div>
-						: filteredHeroes.length == 0 && <div className="alert alert-danger animate__animated animate__fadeIn">There is no a hero with <b>{heroName}</b></div>
+						? <div role="alert" className="alert alert-primary animate__animated animate__fadeIn">Search a hero</div>
+						: filteredHeroes.length == 0 && <div role="alert" className="alert alert-danger animate__animated animate__fadeIn">There is no a hero with <b>{heroName}</b></div>
           }
           {
             filteredHeroes?.map( hero => (
